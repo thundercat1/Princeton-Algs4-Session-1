@@ -1,8 +1,3 @@
-
-/**
- * Created by mch on 9/11/14.
- */
-
 public class Percolation {
     private boolean[] cells;
     //private boolean[] cellsNoBackwash;
@@ -113,8 +108,9 @@ public class Percolation {
 
     public boolean percolates()  {
         //Percolates if and only if the fauce is connected to drain
-        if (percolationAchieved) return true;
-        return uf.connected(0, sideLength * sideLength + 1);
+        //if (percolationAchieved) return true;
+        //return uf.connected(0, sideLength * sideLength + 1);
+        return percolationAchieved || uf.connected(0, sideLength * sideLength + 1);
     }
 
     private void checkInputs(int i, int j) {
