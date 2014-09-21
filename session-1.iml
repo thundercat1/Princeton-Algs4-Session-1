@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/DequesAndQueues/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/DequesAndQueues/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/Percolation/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/Percolation/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/Scratch/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/Scratch/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/SimpleSort/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/SimpleSort/test" isTestSource="true" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="stdlib" level="project" />
+    <orderEntry type="library" name="algs4" level="project" />
+    <orderEntry type="library" name="junit4-4.11" level="project" />
+  </component>
+</module>
+
