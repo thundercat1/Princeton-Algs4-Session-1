@@ -28,5 +28,4 @@ public class SortHelperTest {
         assertTrue(SortHelper.isSorted(sortedIntArray));
     }
 
-
 }

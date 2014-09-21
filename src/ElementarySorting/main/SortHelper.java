@@ -11,4 +11,10 @@ public class SortHelper {
         }
         return true;
     }
+
+    public static <Type extends Comparable<Type>> void exchange(Type[] arr, int a, int b) {
+        Type swap = arr[a];
+        arr[a] = arr[b];
+        arr[b] = swap;
+    }
 }
