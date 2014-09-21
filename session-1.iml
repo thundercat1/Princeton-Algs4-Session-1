@@ -11,12 +11,16 @@
       <sourceFolder url="file://$MODULE_DIR$/src/Scratch/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/SimpleSort/main" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/SimpleSort/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/SocialNetworkUnionFind/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/SocialNetworkUnionFind/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ElementarySorting/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ElementarySorting/test" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="junit4-4.11" level="project" />
     <orderEntry type="library" name="stdlib" level="project" />
     <orderEntry type="library" name="algs4" level="project" />
-    <orderEntry type="library" name="junit4-4.11" level="project" />
   </component>
 </module>
 

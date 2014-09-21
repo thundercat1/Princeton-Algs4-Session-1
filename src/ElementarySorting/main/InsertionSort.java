@@ -3,8 +3,8 @@
  */
 public class InsertionSort{
 
-    public static  <Type extends Comparable<Type>> int less(Type a, Type b) {
-        return b.compareTo(a);
+    public static  <Type extends Comparable<Type>> boolean less(Type a, Type b) {
+        return a.compareTo(b) < 0;
     }
 
 }

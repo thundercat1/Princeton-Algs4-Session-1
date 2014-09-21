@@ -13,9 +13,10 @@ public class InsertionSortTest {
 
     @Test
     public void testCompareComparableItems() {
-        assertEquals(1, InsertionSort.less(1, 3));
-        assertEquals(0, InsertionSort.less(5, 5));
-        assertEquals(-1, InsertionSort.less(6, 2));
+        assertTrue(InsertionSort.less(1, 3));
+        assertFalse(InsertionSort.less(5, 5));
+        assertFalse(InsertionSort.less(6, 2));
+        assertTrue(InsertionSort.less('b','g'));
     }
 
 
