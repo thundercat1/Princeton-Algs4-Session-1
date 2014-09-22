@@ -22,6 +22,7 @@ public class InsertionSort{
                 SortHelper.exchange(arr, j, j-1);
                 j--;
             }
+
         }
         StdOut.println(String.valueOf(n/1000) + "k calls to .less");
     }

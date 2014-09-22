@@ -15,7 +15,6 @@ public class InsertionSortTest {
     }
 
     @Test
-    @Ignore
     public void testBasicSelectionSort() {
         InsertionSort.selectionSort(intArray);
         assertTrue(SortHelper.isSorted(intArray));
@@ -70,9 +69,12 @@ public class InsertionSortTest {
             double end = System.currentTimeMillis();
             StdOut.println("Insertion Sorted " + String.valueOf(trialSize[i]) + " values in " +
                     String.valueOf(end - start) + " millis");
+            assertTrue(SortHelper.isSorted(arr));
         }
+
         StdOut.println();
         StdOut.println();
+
     }
 
 
