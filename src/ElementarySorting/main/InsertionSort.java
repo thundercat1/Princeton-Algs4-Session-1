@@ -1,5 +1,7 @@
 public class InsertionSort{
 
+
+
     public static <Type extends Comparable<Type>> void selectionSort(Type[] arr) {
         int n = 0;
         for (int i = 0; i < arr.length; i++) {

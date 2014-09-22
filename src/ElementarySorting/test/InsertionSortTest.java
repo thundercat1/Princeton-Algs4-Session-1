@@ -11,7 +11,7 @@ public class InsertionSortTest {
     @Before
     public void setUpBeforeTest() {
         intArray = new Integer[] {10, 15, 11, 3, 1, 2, 6, 8, 5, 25, 5, 9};
-        trialSize = new int[] {500, 1000, 2000, 4000, 8000, 16000, 32000, 64000};
+        trialSize = new int[] {500, 1000, 2000, 4000, 8000, 16000, 32000};
     }
 
     @Test
@@ -51,6 +51,29 @@ public class InsertionSortTest {
         StdOut.println();
     }
 
+    @Test
+    @Ignore
+    public void performanceTestLibrarySelectSort() {
+        for (int i = 0; i < trialSize.length; i++) {
+            Double[] arr = new Double[trialSize[i]];
+
+            for (int j = 0; j < trialSize[i]; j++) {
+                arr[j] = StdRandom.uniform();
+            }
+
+            double start = System.currentTimeMillis();
+            Selection.sort(arr);
+            double end = System.currentTimeMillis();
+            StdOut.println("Library Selection Sorted " + String.valueOf(trialSize[i]) + " values in " +
+                    String.valueOf(end - start) + " millis");
+            assertTrue(SortHelper.isSorted(arr));
+        }
+
+        StdOut.println();
+        StdOut.println();
+
+    }
+
 
     @Test
     @Ignore
@@ -66,6 +89,29 @@ public class InsertionSortTest {
             InsertionSort.insertionSort(arr);
             double end = System.currentTimeMillis();
             StdOut.println("Insertion Sorted " + String.valueOf(trialSize[i]) + " values in " +
+                    String.valueOf(end - start) + " millis");
+            assertTrue(SortHelper.isSorted(arr));
+        }
+
+        StdOut.println();
+        StdOut.println();
+
+    }
+
+    @Test
+    @Ignore
+    public void performanceTestLibraryInsertionSort() {
+        for (int i = 0; i < trialSize.length; i++) {
+            Double[] arr = new Double[trialSize[i]];
+
+            for (int j = 0; j < trialSize[i]; j++) {
+                arr[j] = StdRandom.uniform();
+            }
+
+            double start = System.currentTimeMillis();
+            Insertion.sort(arr);
+            double end = System.currentTimeMillis();
+            StdOut.println("Library Insertion Sorted " + String.valueOf(trialSize[i]) + " values in " +
                     String.valueOf(end - start) + " millis");
             assertTrue(SortHelper.isSorted(arr));
         }
