@@ -11,7 +11,6 @@ public class SortHelperTest {
     public void setUpInitialComparables() {
         intArray = new Integer[] {3, 1, 2, 6, 8, 5, 5, 9};
         sortedIntArray = new Integer[] {1, 3, 4, 5, 7};
-
     }
 
     @Test
