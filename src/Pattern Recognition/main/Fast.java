@@ -31,9 +31,11 @@ public class Fast {
             points[i] = new Point(fileIn.readInt(), fileIn.readInt());
             points[i].draw();
         }
+
+        //points is sorted by y- position
         Arrays.sort(points);
 
-        for (int i = 0; i < N - 1; i++) {
+        for (int i = 0; i < N - 3; i++) {
             Point p = points[i];
 
             Point[] sortedPoints = new Point[N-1];
@@ -60,7 +62,7 @@ public class Fast {
 
 
             double slopeMatchValue = slope[0];
-            int idx = 1;
+            int idx = 0;
             int run;
 
             while (idx < slope.length) {
@@ -74,7 +76,7 @@ public class Fast {
                     Point[] segmentPoints = new Point[run];
                     segmentPoints[0] = p;
 
-                    for(int q = 1; q < run; q++) {
+                    for(int q = 1; q < segmentPoints.length; q++) {
                         segmentPoints[q] = sortedPoints[idx - run + q];
                     }
                     Arrays.sort(segmentPoints);

@@ -30,7 +30,11 @@ public class Point implements Comparable<Point> {
         double rise = that.y - this.y;
         double run = that.x - this.x;
 
+        if (this.y == that.y && this.x == that.x) return Double.NEGATIVE_INFINITY;
+
         if (run == 0) return Double.POSITIVE_INFINITY;
+
+        if (this.y == that.y && run < 0) run = -run;
 
         return rise / run;
     }
@@ -40,9 +44,22 @@ public class Point implements Comparable<Point> {
         //is this smaller than that?
         if (this.y < that.y) return -1;
         if (this.y == that.y && this.x < that.x) return -1;
+        if (this.y == that.y && this.x == that.x) return 0;
         return 1;
 
     }
+
+    public final Comparator<Point> SLOPE_ORDER = new Comparator<Point>() {
+        @Override
+        public int compare(Point point, Point point2) {
+            if (slopeTo(point) < slopeTo(point2)) return -1;
+            if (slopeTo(point) > slopeTo(point2)) return 1;
+            return 0;
+        }
+    };
+
+
+
 
     // return string representation of this point
     public String toString() {
